@@ -1,0 +1,403 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --light-red: #F5A5A0;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+
+    --green: #28A745;
+    --light-green: #A9D08D;
+    --purple: #6F42C1;
+    --light-purple: #D8A8E4;
+    --pink: #FF4F89;
+    --light-pink: #F9D1E3;
+    --brown: #8B4513;
+    --light-brown: #D2B48C;
+    --cyan: #17A2B8;
+    --light-cyan: #B0E0E6;
+    --teal: #20C997;
+    --light-teal: #B8F1E0;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+.module-details {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: -40px;
+    max-width: 800px;
+}
+
+.module-background {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+.toggle-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    font-size: 24px;
+    margin-top: -20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: whitesmoke;
+}
+
+.toggle-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.module-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    color: var(--dark);
+    text-align: left;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.module-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--white);
+}
+
+.module-subtitle {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: var(--white);
+}
+
+.module-info {
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
+    width: 100%;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 10px;
+    margin: 0 auto;
+    max-height: 0;
+    margin-top: -18px;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.module-info.visible {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.module-info p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+}
+
+.subject h3 {
+    margin-top: -70px;
+}
+
+/* Box 3: Professor Details (Image on Left, Name on Right, with 'Professor' below) */
+.professor-details {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 8px;
+    height: 20vh;
+    margin-bottom: 20px;
+}
+
+.professor-details img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+    /* Space between image and text */
+}
+
+.professor-details .professor-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.professor-details p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.professor-details .role {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Subject and File Section */
+.sub_and_file {
+    margin-top: 30px;
+    border-top: 2px solid #eee;
+    padding-top: 20px;
+}
+
+.sub_and_file h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.file-button:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .module-details {
+        padding: 10px;
+    }
+
+    .module-info {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .module-info p {
+        flex: unset;
+        margin-bottom: 10px;
+    }
+
+    .module-content-box {
+        flex-direction: column;
+    }
+
+    .professor-details,
+    .module-description {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .professor-details img {
+        margin-bottom: 10px;
+    }
+
+    .professor-details .role {
+        font-size: 14px;
+        color: #777;
+    }
+
+    .module-description h1 {
+        font-size: 20px;
+    }
+
+    .module-description h3 {
+        font-size: 16px;
+    }
+
+    .sub_and_file h3 {
+        font-size: 16px;
+    }
+
+    .file-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.container {
+    display: flex;
+    gap: 10px;
+    margin: 20px;
+    max-width: 1200px; 
+    width: 100%; 
+    margin: 20px auto; 
+}
+
+.left-column {
+    flex: 0.6; 
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+    background-color: var(--light);
+    max-width: 250px; 
+    padding: 10px;
+    height: 150px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-column h3 {
+    color: var(--dark);
+}
+
+.announcement-box {
+    overflow-y: auto;
+    margin-top: 10px;
+    height: 100%;
+}
+
+.announcement-box .announcement-message {
+    color: var(--dark-grey);
+}
+
+.right-column {
+    flex: 2;
+    border: 1px solid var(--light-grey);
+    border-radius: 8px;
+}
+
+.right-column h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+/* Module Styles */
+.module-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light);
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.module-description:hover {
+    box-shadow: 0 2px 1px var(--dark);
+}
+
+.module-link-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.module-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.icon-container {
+    margin-right: 15px;
+}
+
+.module-icon {
+    width: 44px;
+    height: 44px;
+}
+
+.text-container {
+    flex-grow: 1;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: var(--dark-grey);
+    margin-top: 5px;
+}
+
+/* Dot Menu */
+.dot-menu {
+    position: relative;
+}
+
+.dot-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 120px;
+    z-index: 10;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.menu a:hover {
+    background-color: var(--grey);
+}
+
+/* Copy link modal styles */
+.copy-modal {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.copy-modal.show {
+    display: block;
+    opacity: 1;
+}
+

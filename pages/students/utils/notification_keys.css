@@ -1,0 +1,78 @@
+.notifications {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--light);
+    margin-top: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.notification-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.notification-item {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.notification-item:hover {
+    background-color: var(--grey);
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.professor-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.notification-text {
+    font-size: 1rem;
+    color: var(--dark);
+    margin: 0;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--dark-grey);
+}
+
+.notification-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+.notification-label {
+    color: var(--dark);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}

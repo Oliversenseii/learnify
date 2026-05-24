@@ -1,0 +1,247 @@
+/* General Reset and Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5372F0 !important;
+}
+
+/* Game Container Styling */
+.game-container {
+    max-width: 600px;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Title Styling */
+.game-container h1 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(2px);
+}
+
+/* Specific Button Colors */
+.btn-primary {
+    background-color: #3C91E6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2A6EA6;
+}
+
+.btn-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+.btn-warning {
+    background-color: #fd7e14;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e76a00;
+}
+
+/* Input Field Styling */
+.game-content input {
+    padding: 12px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Game Content and Score Styling */
+.game-content {
+    display: none;
+    margin-top: 30px;
+}
+
+#scrambled-word {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 5px !important;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#hint {
+    font-size: 1.5rem;
+}
+
+.text-muted {
+    font-size: 1.1rem;
+}
+
+/* Score, Level, and Timer Styling */
+#score, #timer, #level {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Level Styling */
+#level {
+    color: #FFCE26;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Level-Up Animation */
+@keyframes levelUpAnimation {
+    0% {
+        color: #FFCE26;
+        transform: scale(1);
+    }
+    50% {
+        color: #FD7238;
+        transform: scale(1.2);
+    }
+    100% {
+        color: #FFCE26;
+        transform: scale(1);
+    }
+}
+
+.level-up {
+    animation: levelUpAnimation 1s ease-in-out;
+}
+
+/* Result Section */
+#result {
+    display: none;
+    margin-top: 30px;
+}
+
+#result h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    color: #FFCE26;
+}
+
+#final-score {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Restart Button */
+#restart-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#restart-btn:hover {
+    background-color: #218838;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-stats p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score {
+    text-align: left;
+}
+
+.level {
+    text-align: right;
+}
+
+#submit-btn, #scramble-btn, #restart-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@keyframes correctAnswer {
+    0% {
+        background-color: #28a745; 
+        transform: scale(1);
+    }
+    50% {
+        background-color: #218838; 
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: #28a745; 
+        transform: scale(1);
+    }
+}
+
+.correct-answer {
+    animation: correctAnswer 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bounce-button {
+    animation: bounce 0.3s ease-in-out;
+}
+
+input:invalid {
+    border-color: red !important;
+}
+
+

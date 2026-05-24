@@ -1,0 +1,284 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+	--light-red: #F5A5A0;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+    
+    --green: #28A745;
+    --light-green: #A9D08D;
+    --purple: #6F42C1;
+    --light-purple: #D8A8E4;
+    --pink: #FF4F89;
+    --light-pink: #F9D1E3;
+    --brown: #8B4513;
+    --light-brown: #D2B48C;
+    --cyan: #17A2B8;
+    --light-cyan: #B0E0E6;
+    --teal: #20C997;
+    --light-teal: #B8F1E0;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+
+.section-info {
+    margin: 20px 0;
+    padding: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--light);
+    border-radius: 5px;
+}
+
+.section-info h2 {
+    font-size: 18px;
+    color: var(--dark);
+    font-weight: bold;
+    text-align: center;
+}
+
+.section-info p {
+    font-size: 16px;
+    color: var(--dark-grey);
+}
+
+/* Table Container */
+.table-container {
+    margin: 20px;
+}
+
+/* STUDENT TABLE */
+.student-table {
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.student-table td {
+    padding: 10px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-table th:nth-child(1) {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.student-table th:nth-child(3) {
+    padding: 10px 15px;
+    text-align: left;
+    color: var(--dark-grey);
+}
+
+.student-table th {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--dark);
+    border-bottom: 1px solid #ddd !important;
+}
+
+.student-table td {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+}
+
+.student-table td:nth-child(3) {
+    text-align: right; 
+}
+
+.student-table td:nth-child(3) a {
+    display: inline-block;
+    color: var(--dark);
+    font-size: 2.5rem;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.student-table td a[title] {
+    position: relative;
+}
+
+.student-table td:nth-child(2) {
+    padding-right: 240px; 
+}
+
+/* .student-table td a[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    margin-top: -10px;
+}
+
+.student-table td a[title]:hover::before {
+    content: "";
+    position: absolute;
+    top: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    z-index: 101;
+} */
+
+/* PROFESSOR TABLE */
+.professor-table {
+    max-width: 750px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin: 0 auto;
+}
+
+.professor-table td {
+    padding: 10px 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.professor-table th:nth-child(1) {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.professor-table th:nth-child(3) {
+    padding: 10px 15px;
+    text-align: left;
+    color: var(--dark-grey);
+}
+
+.professor-table th {
+    font-weight: bold;
+    font-size: 15px;
+    color: var(--dark);
+    border-bottom: 1px solid #ddd !important;
+}
+
+.professor-table td {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--dark-grey);
+}
+
+.student-table td:nth-child(3) {
+    text-align: right; 
+}
+
+.professor-table td:nth-child(3) a {
+    display: inline-block;
+    color: var(--dark);
+    font-size: 2.5rem;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.professor-table td a[title] {
+    position: relative;
+}
+
+.professor-table td:nth-child(2) {
+    padding-right: 240px; 
+}
+
+.professor-table td a[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: 125%; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    margin-top: -10px;
+}
+
+.professor-table td a[title]:hover::before {
+    content: "";
+    position: absolute;
+    top: 120%; 
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+    z-index: 101;
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.profile-img-prof {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .student-table th, .student-table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
+
+.no-enrollment {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.no-enrollment svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    fill: #007bff;
+}
+
+.no-enrollment p {
+    font-size: 16px;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+

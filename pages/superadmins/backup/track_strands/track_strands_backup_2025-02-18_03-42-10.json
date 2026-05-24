@@ -1,0 +1,65 @@
+[
+    {
+        "strandID": 1,
+        "strandCode": "STEM",
+        "strandName": "Science, Technology, Engineering and Mathematics",
+        "trackName": "Academic ",
+        "description": "It represents an interdisciplinary approach to education that integrates these four subjects into a cohesive learning experience based on real-world applications.",
+        "dateCreated": "2024-12-06 16:46:11",
+        "archived": 0
+    },
+    {
+        "strandID": 2,
+        "strandCode": "ABM",
+        "strandName": "Accountancy, Business, and Management",
+        "trackName": "Academic ",
+        "description": "It prepares students for careers in business, finance, and management by combining theoretical knowledge with practical applications in real-world business scenarios.",
+        "dateCreated": "2024-12-06 16:58:58",
+        "archived": 0
+    },
+    {
+        "strandID": 3,
+        "strandCode": "HUMSS",
+        "strandName": "Humanities and Social Sciences",
+        "trackName": "Academic ",
+        "description": "It prepares students for careers in communication, education, politics, and social services by developing critical thinking, research, and analytical skills through real-world social and cultural studies.",
+        "dateCreated": "2024-12-06 19:32:40",
+        "archived": 0
+    },
+    {
+        "strandID": 7,
+        "strandCode": "FLTH",
+        "strandName": "Front Office, Tourism Promotion, Local Tour Guiding, Housekeeping",
+        "trackName": "TVL",
+        "description": "It equips students with skills in customer service, travel planning, tour operations, and hotel management, preparing them for careers in the tourism and hospitality industry through hands-on training and real-world applications.",
+        "dateCreated": "2025-01-24 20:51:44",
+        "archived": 0
+    },
+    {
+        "strandID": 8,
+        "strandCode": "AS",
+        "strandName": "Automotive Servicing",
+        "trackName": "TVL",
+        "description": "It equips students with technical skills in engine diagnostics, electrical systems, and mechanical repairs, preparing them for careers in the automotive industry through hands-on training and real-world applications.",
+        "dateCreated": "2025-01-24 21:04:07",
+        "archived": 0
+    },
+    {
+        "strandID": 9,
+        "strandCode": "CBF",
+        "strandName": "Cookery, Bread and Pastry Production, Food and Beverage Services",
+        "trackName": "TVL",
+        "description": "They equip students with skills in food preparation, baking, and restaurant service, preparing them for careers in the food and hospitality industry through hands-on training and real-world applications.",
+        "dateCreated": "2025-01-24 21:05:26",
+        "archived": 0
+    },
+    {
+        "strandID": 10,
+        "strandCode": "EIM",
+        "strandName": "Electrical Installation and Maintenance",
+        "trackName": "TVL",
+        "description": "It equips students with technical skills in wiring, troubleshooting, and safety protocols, preparing them for careers in the electrical and construction industries through hands-on training and real-world applications.",
+        "dateCreated": "2025-01-24 21:06:44",
+        "archived": 0
+    }
+]

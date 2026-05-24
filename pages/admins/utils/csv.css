@@ -1,0 +1,152 @@
+.form-container {
+    max-width: 500px;
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative; 
+    box-sizing: border-box;
+    margin: 0 auto; 
+    margin-top: 20px;  
+}
+
+.form-container form label {
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid var(--grey);
+    border-radius: 4px;
+    background-color: var(--light);
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--dark);
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: var(--blue);
+    background-color: var(--light-blue);
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Error Notification */
+.error-notification {
+    background-color:#a90c0c;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px; 
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+}
+
+.error-notification ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.error-notification li {
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.error-notification li:before {
+    content: "⚠️ ";
+    margin-right: 5px;
+}
+
+.success-notification {
+    background-color: var(--green);
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px; 
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.success-notification ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.success-notification li {
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.success-notification li:before {
+    content: "✔️ ";
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%; 
+    }
+
+    button[type="submit"] {
+        padding: 10px;
+        font-size: 14px; 
+    }
+
+    input[type="file"] {
+        padding: 8px;
+        font-size: 14px; 
+    }
+
+    label {
+        font-size: 14px;
+    }
+}
+
+.form-container form input[type="file"] {
+    color: var(--dark); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container form input[type="file"]::file-selector-button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-container form input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+}

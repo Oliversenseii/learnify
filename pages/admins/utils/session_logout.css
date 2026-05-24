@@ -1,0 +1,138 @@
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --light-red: #F5A5A0;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+
+    --green: #28A745;
+    --light-green: #A9D08D;
+    --purple: #6F42C1;
+    --light-purple: #D8A8E4;
+    --pink: #FF4F89;
+    --light-pink: #F9D1E3;
+    --brown: #8B4513;
+    --light-brown: #D2B48C;
+    --cyan: #17A2B8;
+    --light-cyan: #B0E0E6;
+    --teal: #20C997;
+    --light-teal: #B8F1E0;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+
+.popup-container {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    z-index: 1000;
+}
+
+.toggle-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+.table-data {
+    display: none;
+    background-color: var(--grey);
+    padding: 10px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: var(--dark);
+    width: 250px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateY(20px);
+}
+
+.table-data.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.order form {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.order label {
+    font-size: 12px;
+}
+
+#session_time {
+    padding: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+}
+
+table th {
+    text-align: left;
+    font-size: 12px;
+    padding-bottom: 6px;
+}
+
+table td {
+    font-size: 12px;
+    padding: 4px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.timer-display {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .table-data {
+        width: 200px;
+    }
+}

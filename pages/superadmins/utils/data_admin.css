@@ -1,0 +1,140 @@
+.admin-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.admin-table th {
+    background: #0056b3;
+    color: #fff;
+    font-weight: bold;
+}
+
+.admin-table td {
+    color: var(--dark);
+    border-bottom: 1px solid #ddd;
+}
+
+.admin-table tr:hover {
+    background: var(--grey);
+}
+
+.admin-table .profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.admin-table {
+    margin: 20px;
+    padding: 10px;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .admin-table table {
+        font-size: 14px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 8px 10px;
+    }
+}
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    background-color: var(--grey);
+    border-radius: 5px;
+    color: var(--dark) !important;
+    outline: none;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search-form button {
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-form button[type="submit"] {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.search-form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+.search-form .clear-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.search-form .clear-btn:hover {
+    background: linear-gradient(135deg, #c82333, #b21f2d);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-form input[type="text"] {
+        width: 100%;
+    }
+
+    .search-form button,
+    .search-form .clear-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.btn-edit, .btn-archive {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+

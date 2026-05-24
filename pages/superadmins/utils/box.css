@@ -1,0 +1,72 @@
+
+#content main .box-info {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	grid-gap: 24px;
+	margin-top: 36px;
+}
+#content main .box-info li {
+	padding: 24px;
+	background: var(--light);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	grid-gap: 24px;
+}
+#content main .box-info li .bx {
+	width: 80px;
+	height: 80px;
+	border-radius: 10px;
+	font-size: 36px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#content main .box-info a:nth-child(1) li .bx {
+    background: var(--light-blue);
+    color: var(--blue);
+}
+
+#content main .box-info a:nth-child(2) li .bx {
+    background: var(--light-yellow);
+    color: var(--yellow);
+}
+
+#content main .box-info a:nth-child(3) li .bx {
+    background: var(--light-orange);
+    color: var(--orange);
+}
+
+#content main .box-info a:nth-child(4) li .bx {
+    background: var(--light-green);  
+    color: var(--green);          
+}
+
+#content main .box-info a:nth-child(5) li .bx {
+    background: var(--light-red);    
+    color: var(--red);              
+}
+
+#content main .box-info a:nth-child(6) li .bx {
+    background: var(--light-purple);    
+    color: var(--purple);              
+}
+
+
+#content main .box-info a:nth-child(7) li .bx {
+    background: var(--light-pink);   
+    color: var(--pink);             
+}
+
+#content main .box-info a:nth-child(8) li .bx {
+    background: var(--light-brown);  
+    color: var(--brown);            
+}
+#content main .box-info li .text h3 {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-info li .text p {
+	color: var(--dark);	
+}

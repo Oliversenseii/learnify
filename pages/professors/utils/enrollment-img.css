@@ -1,0 +1,29 @@
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 20px 0;
+}
+.image-option {
+    text-align: center;
+}
+.image-option input[type="radio"] {
+    display: none;
+}
+.image-option label {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.image-option label img {
+    width: 100px; 
+    height: 70px; 
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+.image-option input[type="radio"]:checked + label img {
+    border-color: #007bff;
+    transform: scale(1.5);
+}

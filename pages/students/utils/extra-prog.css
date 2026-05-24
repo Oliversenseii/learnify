@@ -1,0 +1,226 @@
+body {
+    background-color: #5372F0 !important;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#gameContainer {
+    max-width: 750px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+}
+
+#scrambledWord {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#submitBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); 
+}
+
+#submitBtn:focus {
+    outline: 3px solid #0056b3;
+}
+
+
+#level {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-top: 20px;
+}
+
+#coins {
+    font-size: 1.5rem;
+}
+
+.congratulations {
+    display: none;
+    padding: 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.congratulations h2 {
+    color: #28a745;
+    font-size: 2rem;
+}
+
+.congratulations p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+#certificateLink {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.alert {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert.show {
+    display: block;
+    animation: slideIn 0.5s ease-out;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+#leaderboardNav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#leaderboardNav a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    color: #007bff;
+}
+
+#leaderboardNav a:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.modal-body table th,
+.modal-body table td {
+    padding: 10px;
+    text-align: center;
+}
+
+.modal-body table td:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.modal-body table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.modal-body table img {
+    margin-right: 10px;
+}
+
+#leaderboardModal,
+#sectionLeaderboardModal {
+    margin-top: 40px;
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.btn-close:hover {
+    background-color: transparent;
+}
+
+.badge {
+    font-size: 2em; 
+    padding: 0.2em 0.5em;
+}
+
+.modal-dialog {
+    margin-top: 60px;
+}
+
+.current-badge {
+    background-color: #f8d7da;
+    color: #721c24; 
+    font-weight: bold;
+}

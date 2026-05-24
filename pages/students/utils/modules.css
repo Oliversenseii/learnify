@@ -1,0 +1,209 @@
+:root { 
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --light-red: #F5A5A0;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+
+    --green: #28A745;
+    --light-green: #A9D08D;
+    --purple: #6F42C1;
+    --light-purple: #D8A8E4;
+    --pink: #FF4F89;
+    --light-pink: #F9D1E3;
+    --brown: #8B4513;
+    --light-brown: #D2B48C;
+    --cyan: #17A2B8;
+    --light-cyan: #B0E0E6;
+    --teal: #20C997;
+    --light-teal: #B8F1E0;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+
+.enrolled-subjects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.subject-box {
+    background-color: var(--light);
+    padding: 15px;
+    width: calc(25% - 15px); 
+    box-sizing: border-box;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content stretches to fill the box */
+    height: 300px; /* Set a fixed height for the subject box */
+}
+
+.subject-img-container {
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.subject-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Subject Content */
+.subject-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1; /* Ensures the content takes up available space */
+}
+
+/* Subject Name */
+.subject-name {
+    color: var(--dark);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Professor Details and 3 dots dropdown */
+.professor-and-dots {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: auto; /* Pushes this section to the bottom */
+}
+
+/* Professor Details */
+.professor-details {
+    display: flex;
+    align-items: center;
+}
+
+.professor-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.professor-name {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.professor-details small {
+    font-size: 12px;
+    color: var(--dark-grey);
+}
+
+/* Dots Dropdown */
+.dots-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px var(--blue);
+    min-width: 180px; 
+    padding: 0;
+    z-index: 10; 
+}
+
+.dropdown-menu.show {
+    display: block;
+    color: var(--dark);
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    width: 100%; 
+}
+
+.dropdown-item:hover {
+    background-color: var(--grey);
+}
+
+.dots-dropdown .bx {
+    font-size: 24px;
+    color: var(--dark); 
+    margin-right: 10px;
+}
+
+.dots-dropdown i:hover {
+    color: var(--blue); 
+}
+
+/* View Module Button */
+.view-module {
+    background-color: var(--grey);
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--dark);
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.view-module:hover {
+    background-color: var(--dark-grey); 
+    color: #333; 
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .subject-box {
+        width: calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-box {
+        width: 100%; /* 1 box per row */
+    }
+}
+
+.no-enrollment {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.no-enrollment svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    fill: #007bff;
+}
+
+.no-enrollment p {
+    font-size: 16px;
+    color: var(--dark);
+    font-weight: 600;
+}

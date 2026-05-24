@@ -1,0 +1,56 @@
+.notification-modal {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 300px;
+    background-color: var(--light);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.notification-modal .modal-contentsss {
+    padding: 15px;
+    color: var(--dark);
+}
+
+.notification-modal .modal-contentsss h3 {
+    color: var(--dark);
+}
+
+.notification-modal .modal-contentsss ul li {
+    color: var(--dark-grey);
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+.enrollment-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.enrollment-item:hover {
+    background-color: var(--grey);
+}
+
+.enrollment-image {
+    margin-right: 10px; 
+}
+
+.enrollment-details {
+    flex-grow: 1;
+}
+
+.notification-modal .closes-btn {
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    border-radius: 50%;
+    padding: 1px;
+    top: 10px;
+    right: 6px;
+}
+
+

@@ -1,0 +1,55 @@
+.section-select-form,
+.student-select-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.section-select,
+.student-select {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    background-color: var(--light);
+    color: var(--dark);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-select:hover,
+.student-select:hover {
+    border-color: #2980b9;
+    background-color: var(--light);
+}
+
+.section-select:focus,
+.student-select:focus {
+    box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.5);
+}
+
+/* Option Styling */
+.section-select option,
+.student-select option {
+    padding: 10px;
+    font-size: 16px;
+    color: var(--dark);
+    background: var(--light);
+}
+
+.section-select option:checked,
+.student-select option:checked {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .section-select,
+    .student-select {
+        width: 100%;
+    }
+}

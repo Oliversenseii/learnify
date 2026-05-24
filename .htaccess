@@ -1,0 +1,5 @@
+
+RewriteEngine on
+
+RewriteRule ^index?$ index.php
+RewriteRule ^qrcode?$ qr_code.php

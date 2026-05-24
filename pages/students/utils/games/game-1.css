@@ -1,0 +1,65 @@
+.mechanics-form {
+    font-family: var(--lato);
+    color: var(--dark);
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-size: 1.4rem;
+}
+
+.objectives, .setup, .gameplay, .hints, .scoring, .time-limit, .ending-game, .saving-progress, .special-features {
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+.objectives h2, .setup h2, .gameplay h2, .hints h2, .scoring h2, .time-limit h2, .ending-game h2, .saving-progress h2, .special-features h2 {
+    text-transform: uppercase;
+    background-color: var(--grey);
+    padding: 10px;
+    max-width: fit-content;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--blue);
+}
+
+.setup ul {
+    padding-left: 20px;
+}
+
+.setup li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.time-limit ol {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.time-limit li span, .setup li span, .special-features p span {
+    color: red;
+    font-weight: bold;
+}
+
+.time-limit li {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.time-limit ol li mark {
+    padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .mechanics-form {
+        padding: 15px;
+    }
+
+    .objectives, .setup, .gameplay, .hints, .scoring, .time-limit, .ending-game, .special-peatures {
+        margin-bottom: 15px;
+    }
+
+}

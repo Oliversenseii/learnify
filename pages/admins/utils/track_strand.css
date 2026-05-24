@@ -1,0 +1,426 @@
+.success-notification {
+    background-color: #4CAF50; 
+    color: var(--light); 
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.register-section {
+    width: 38%;
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.register-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-section label,
+.register-section input,
+.register-section textarea {
+    font-size: 1rem;
+    color: var(--dark);
+    
+}
+
+.register-section input,
+.register-section textarea {
+    padding: 10px;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 5px;
+}
+
+.register-section button {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.register-section button:hover {
+    background-color: #0056b3;
+}
+
+/* View all section */
+.view-all-section {
+    width: 58%;
+    background-color: var(--light);
+    color: var(--dark);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-all-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.view-all-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.view-all-section .table-wrapper {
+    width: 100%;
+    max-height: 400px; 
+    border-radius: 5px; 
+}
+
+.view-all-section th,
+.view-all-section td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--grey);
+}
+
+.view-all-section th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.view-all-section tbody tr:hover {
+    background: var(--grey);
+}
+
+.view-all-section td a {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.view-all-section td a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    display: inline-block; 
+    width: auto; 
+    height: auto; 
+    padding: 5px 10px; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    line-height: normal;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #008000;
+    color: #ffffff;
+}
+
+.edit-btn:hover {
+    background-color: #006400;
+}
+
+.archive-btn {
+    background-color: #a90c0c;
+    color: white;
+}
+
+.archive-btn:hover {
+    background-color: #820a0a;
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .register-section,
+    .view-all-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .view-all-section table {
+        font-size: 0.9rem;
+    }
+
+    .view-all-section th,
+    .view-all-section td {
+        padding: 8px;
+    }
+
+    .view-all-section .table-wrapper {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 480px) {
+    .register-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .view-all-section table {
+        font-size: 0.8rem;
+    }
+
+    .view-all-section th,
+    .view-all-section td {
+        padding: 6px;
+    }
+
+    .register-section form {
+        gap: 5px;
+    }
+
+    .register-section label,
+    .register-section input,
+    .register-section textarea {
+        font-size: 0.8rem;
+    }
+
+    .register-section button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+.modal-ts {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 80px;
+}
+
+.modal-content-ts {
+    background-color: var(--light);
+    margin: 5% auto;
+    padding: 40px;
+    width: 80%;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+.modal-ts .modal-content-ts h3 {
+    color: var(--dark);
+    font-size: 1.5rem;
+    text-align: left;
+    padding-top: 20px;
+}
+.modal-ts .modal-content-ts h1 {
+    color: var(--dark);
+    font-size: 2.5rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.close {
+    color: var(--dark-grey);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+}
+.modal-buttons .btn {
+    margin: 0; 
+    padding: 10px 25px; 
+    font-size: 16px; 
+    font-weight: 500;
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    width: auto;
+}
+
+@media (max-width: 600px) {
+    .modal-content-ts {
+        margin-top: 90px;
+        width: 80%;
+        margin-right: 5px;
+        max-width: none;
+    }
+
+    .modal-buttons {
+        flex-direction: column; 
+    }
+
+    .modal-buttons .btn {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+}
+
+.register-section select {
+    padding: 10px;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+.register-section select:focus {
+    outline: none;
+    border: 2px solid var(--dark);
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination a:hover {
+    background-color: #0056b3;
+}
+
+.pagination span {
+    padding: 10px;
+}
+
+.pagination .prev, .pagination .next {
+    font-weight: bold;
+}
+
+.form-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.enroll-form {
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+.select-all-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.checkbox-label {
+    font-size: 16px;
+    cursor: pointer;
+}
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.student-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: var(--light);
+    box-shadow: 0 1px 1px #ccc;
+    transition: 0.3s;
+}
+.student-item:hover {
+    background: var(--grey);
+    box-shadow: 0 2px 1px #ccc;
+}
+.student-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.student-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.student-name {
+    font-size: 16px;
+    color: var(--dark);
+}
+.form-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit-btn:hover {
+    background: #0056b3;
+}

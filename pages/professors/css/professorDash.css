@@ -1,0 +1,1327 @@
+#content main .head-title .left h1 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+:root {
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --grey: #f3f4f6;
+    --dark-grey: #9ca3af;
+    --dark: #1f2937;
+    --green: #10b981;
+    --red: #ef4444;
+    --purple: #8b5cf6;
+    --light-blue: #e0f2fe;
+    --excel-green: #107C41;
+    --excel-cell-grey: #D3D3D3;
+    --excel-sticky-grey: #E6E6E6;
+    --excel-button-grey: #D9D9D9;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+}
+
+.search-form,
+.student-filter-form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--grey);
+}
+
+.search-form input[type="text"],
+.search-form select,
+.student-filter-form input[type="text"],
+.student-filter-form select {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--dark-grey);
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 0.375rem;
+    outline: none;
+    flex: 1;
+    min-width: 150px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-form input[type="text"]:focus,
+.search-form select:focus,
+.student-filter-form input[type="text"]:focus,
+.student-filter-form select:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.search-form button,
+.search-form .clear-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    min-width: 100px;
+}
+
+.search-form button[type="submit"] {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.search-form button[type="submit"]:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.search-form .clear-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.search-form .clear-btn:hover {
+    background: linear-gradient(135deg, #c82333, #b21f2d);
+    transform: translateY(-2px);
+}
+
+.sort-btn {
+    background: linear-gradient(135deg, #6f42c1, #5a32a8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sort-btn:hover {
+    background: linear-gradient(135deg, #5a32a8, #4a288f);
+    transform: translateY(-2px);
+}
+
+.card-container {
+    margin: 1.5rem;
+    padding: 1.5rem;
+}
+
+.card {
+    background: var(--light);
+    border-radius: 0.5rem;
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--grey);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-header .section-id {
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.card-body {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.2);  */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-body p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--dark);
+    display: grid;
+    grid-template-columns: 20px 80px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-body p i {
+    color: var(--blue);
+    font-size: 1.2rem;
+    justify-self: center;
+}
+
+.card-body p .label {
+    font-weight: 600;
+    text-align: left;
+}
+
+.card-body p .value {
+    font-weight: 400;
+}
+
+.card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 1.5rem;
+    border-radius: 0.5rem;
+}
+
+/* .card-actions .action-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            width: 100%;
+            flex-wrap: wrap;
+        } */
+
+.card-actions .action-group .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-actions .action-group h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.card-actions .action-group .button-container {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    width: 20%;
+    margin: 0 auto;
+
+}
+
+.card-actions button,
+.card-actions a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.375rem;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: var(--transition);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.total-counts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+
+.stat-box {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--grey);
+    border-top: 4px solid #007bff;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.stat-box:nth-child(1):hover,
+.stat-box:nth-child(2):hover,
+.stat-box:nth-child(3):hover,
+.stat-box:nth-child(4):hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.15);
+    border-top: 10px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    border-left: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+}
+
+.stat-box h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.stat-box p {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.student-btn {
+    background: linear-gradient(135deg, #28a745, #218838);
+}
+
+.student-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    transform: translateY(-2px);
+}
+
+.module-btn {
+    background: linear-gradient(135deg, #6f42c1, #5a32a8);
+}
+
+.module-btn:hover {
+    background: linear-gradient(135deg, #5a32a8, #4a288f);
+    transform: translateY(-2px);
+}
+
+.attendance-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.attendance-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.view-attendance-btn {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+.view-attendance-btn:hover {
+    background: linear-gradient(135deg, #e0a800, #c69500);
+    transform: translateY(-2px);
+}
+
+.quiz-btn {
+    background: linear-gradient(135deg, #6610f2, #5208c9);
+}
+
+.quiz-btn:hover {
+    background: linear-gradient(135deg, #5208c9, #4307a3);
+    transform: translateY(-2px);
+}
+
+.announcement-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.announcement-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.message-btn {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+}
+
+.message-btn:hover {
+    background: linear-gradient(135deg, #5a6268, #4b5156);
+    transform: translateY(-2px);
+}
+
+.modal {
+    z-index: 1000000;
+}
+
+.modal-content {
+    background: var(--light);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-md);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+.modal-content #moduleFile:hover,
+.modal-content #announcementFile:hover {
+    cursor: pointer;
+}
+
+.modal-content #moduleFile::file-selector-button,
+.modal-content #announcementFile::file-selector-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.modal-content #moduleFile::file-selector-button:hover,
+.modal-content #announcementFile::file-selector-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+.modal-content.fullscreen {
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+    margin: 0;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.fullscreen-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.fullscreen-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.close-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+    background: linear-gradient(135deg, #c82333, #b21f2d);
+    transform: translateY(-2px);
+}
+
+.modal-content:not(.view-attendance-modal) h3 {
+    margin: 0 0 1rem;
+    color: var(--dark);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-content .student-table,
+.modal-content .module-table,
+.modal-content .attendance-table:not(.excel-like),
+.modal-content .announcement-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.9rem;
+    border: 1px solid var(--grey);
+    border-radius: 0.375rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    background: var(--light);
+}
+
+.modal-content .student-table th,
+.modal-content .student-table td,
+.modal-content .module-table th,
+.modal-content .module-table td,
+.modal-content .attendance-table:not(.excel-like) th,
+.modal-content .attendance-table:not(.excel-like) td,
+.modal-content .announcement-table th,
+.modal-content .announcement-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--grey);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.modal-content .student-table th,
+.modal-content .module-table th,
+.modal-content .attendance-table:not(.excel-like) th,
+.modal-content .announcement-table th {
+    background: #0056b3;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.modal-content .student-table td,
+.modal-content .module-table td,
+.modal-content .attendance-table:not(.excel-like) td,
+.modal-content .announcement-table td {
+    color: var(--dark);
+    text-transform: uppercase;
+}
+
+.modal-content .student-table tr:nth-child(even),
+.modal-content .module-table tr:nth-child(even),
+.modal-content .attendance-table:not(.excel-like) tr:nth-child(even),
+.modal-content .announcement-table tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.1);
+    /* border: 1px solid rgba(255, 255, 255, 0.2);  */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content .student-table tr:hover,
+.modal-content .module-table tr:hover,
+.modal-content .attendance-table:not(.excel-like) tr:hover,
+.modal-content .announcement-table tr:hover {
+    background-color: var(--grey);
+    transition: background-color 0.2s ease;
+}
+
+.modal-content .module-table td.description {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-content .module-table td.description:hover {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: inherit;
+    position: relative;
+    z-index: 20;
+}
+
+.modal-content .module-upload-form,
+.modal-content .attendance-form,
+.modal-content .announcement-form,
+.modal-content .edit-module-form,
+.modal-content .edit-announcement-form {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--grey);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content .module-upload-form input[type="file"],
+.modal-content .module-upload-form input[type="text"],
+.modal-content .attendance-form input[type="date"],
+.modal-content .announcement-form input[type="text"],
+.modal-content .announcement-form textarea,
+.modal-content .edit-module-form input[type="file"],
+.modal-content .edit-module-form input[type="text"],
+.modal-content .edit-announcement-form input[type="text"],
+.modal-content .edit-announcement-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--dark-grey);
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.modal-content .announcement-form textarea,
+.modal-content .edit-announcement-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.modal-content .attendance-form label {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.modal-content .module-upload-form button,
+.modal-content .attendance-form button,
+.modal-content .announcement-form button,
+.modal-content .edit-module-form button,
+.modal-content .edit-announcement-form button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-end;
+}
+
+.modal-content .module-upload-form button:hover,
+.modal-content .attendance-form button:hover,
+.modal-content .announcement-form button:hover,
+.modal-content .edit-module-form button:hover,
+.modal-content .edit-announcement-form button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.btn-download,
+.btn-delete,
+.btn-view {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.25rem;
+}
+
+.modal-body .form-group input[type="file"]::file-selector-button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+.btn-view {
+    background: linear-gradient(135deg, #6f42c1, #5a32a8);
+    color: white;
+}
+
+.btn-view:hover {
+    background: linear-gradient(135deg, #5a32a8, #4a288f);
+}
+
+.btn-download {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+}
+
+.btn-delete {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: white;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.btn-delete:hover {
+    background: linear-gradient(135deg, #c82333, #b21f2d);
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, #e0a800, #c69500);
+    transform: translateY(-2px);
+}
+
+.success-notification,
+.error-notification {
+    background: #10b981;
+    color: white;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.error-notification {
+    background: linear-gradient(135deg, #dc3545, #c82333) !important;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.pagination a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--dark-grey);
+    border-radius: 0.375rem;
+    text-decoration: none;
+    color: var(--dark);
+    transition: all 0.3s ease;
+}
+
+.pagination a.active {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border-color: var(--blue);
+}
+
+.pagination a:hover:not(.disabled) {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.pagination a.disabled {
+    color: var(--dark-grey);
+    cursor: not-allowed;
+}
+
+.view-attendance-modal {
+    background: var(--light);
+    border: 1px solid var(--excel-cell-grey);
+    border-radius: 0.5rem;
+}
+
+.view-attendance-modal h3 {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.attendance-table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    background: var(--grey);
+    border-radius: 0.375rem;
+}
+
+.attendance-table.excel-like {
+    border-collapse: collapse;
+    font-family: 'Calibri', sans-serif;
+    font-size: 0.9rem;
+}
+
+.attendance-table.excel-like th,
+.attendance-table.excel-like td {
+    padding: 0.75rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.attendance-table.excel-like th {
+    background: #0056b3;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.attendance-table.excel-like th.student-name {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    position: sticky;
+    left: 0;
+    z-index: 15;
+    min-width: 150px;
+}
+
+.attendance-table.excel-like td {
+    background: var(--grey);
+    color: var(--dark);
+}
+
+.attendance-table.excel-like td.student-name {
+    background-color: var(--grey);
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    text-transform: capitalize;
+}
+
+.attendance-table.excel-like td.attendance-status {
+    min-width: 120px;
+}
+
+.attendance-table.excel-like tr:nth-child(even) {
+    background-color: var(--light-blue);
+}
+
+.attendance-table.excel-like tr:hover td {
+    transition: background-color 0.2s ease;
+}
+
+.attendance-table.excel-like select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--dark-grey);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.view-attendance-modal .attendance-form {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    background: var(--grey);
+    padding: 1rem;
+    border-radius: 0.375rem;
+    border: 1px solid var(--grey);
+    box-shadow: var(--shadow-sm);
+}
+
+.view-attendance-modal .attendance-form input[type="date"] {
+    border: 1px solid var(--dark-grey);
+    background: var(--light);
+    font-family: 'Calibri', sans-serif;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.9rem;
+}
+
+.view-attendance-modal .attendance-form button,
+.view-attendance-modal .attendance-form .clear-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: 1px solid var(--excel-cell-grey);
+    border-radius: 0.375rem;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Calibri', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.view-attendance-modal .attendance-form button:hover,
+.view-attendance-modal .attendance-form .clear-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.advisory-yes {
+    color: var(--green) !important;
+    font-weight: 600;
+}
+
+.advisory-no {
+    color: #ef4444 !important;
+}
+
+@media (max-width: 768px) {
+
+    .search-form,
+    .student-filter-form {
+        flex-direction: column;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .search-form input[type="text"],
+    .search-form select,
+    .student-filter-form input[type="text"],
+    .student-filter-form select,
+    .search-form button,
+    .search-form .clear-btn,
+    .search-form .sort-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .card-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-body {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .card-body p {
+        font-size: 0.85rem;
+        grid-template-columns: 18px 80px 1fr;
+    }
+
+    .card-actions {
+        gap: 0.75rem;
+        margin: 1rem;
+    }
+
+    .card-actions .action-group .title-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-actions .action-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+
+    .card-actions .action-group .title-container {
+        width: 100%;
+    }
+
+    .card-actions .action-group h4 {
+        margin: 0 auto;
+    }
+
+    .card-actions .action-group .button-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-actions button,
+    .card-actions a {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .card-actions .action-group h4 {
+        font-size: 0.9rem;
+    }
+
+    .total-counts {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box h3 {
+        font-size: 1rem;
+    }
+
+    .stat-box p {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .modal-content:not(.view-attendance-modal) h3 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content .student-table,
+    .modal-content .module-table,
+    .modal-content .attendance-table:not(.excel-like),
+    .modal-content .announcement-table {
+        font-size: 0.85rem;
+    }
+
+    .modal-content .student-table th,
+    .modal-content .student-table td,
+    .modal-content .module-table th,
+    .modal-content .module-table td,
+    .modal-content .attendance-table:not(.excel-like) th,
+    .modal-content .attendance-table:not(.excel-like) td,
+    .modal-content .announcement-table th,
+    .modal-content .announcement-table td {
+        padding: 0.5rem;
+    }
+
+    .attendance-table.excel-like {
+        font-size: 0.85rem;
+    }
+
+    .attendance-table.excel-like th,
+    .attendance-table.excel-like td {
+        padding: 0.5rem;
+    }
+
+    .attendance-table.excel-like td.attendance-status {
+        min-width: 100px;
+    }
+
+    .btn-download,
+    .btn-delete,
+    .btn-edit,
+    .btn-view {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .pagination a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+
+    .profile-img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .search-form,
+    .student-filter-form {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .search-form input[type="text"],
+    .search-form select,
+    .student-filter-form input[type="text"],
+    .student-filter-form select,
+    .search-form button,
+    .search-form .clear-btn,
+    .search-form .sort-btn {
+        font-size: 0.8rem;
+    }
+
+    .card-container {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    .card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-header .section-id {
+        font-size: 0.8rem;
+    }
+
+    .card-body p {
+        font-size: 0.8rem;
+        grid-template-columns: 16px 70px 1fr;
+    }
+
+    .card-actions {
+        gap: 0.5rem;
+        margin: 0.5rem;
+    }
+
+    .card-actions button,
+    .card-actions a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .card-actions .action-group h4 {
+        font-size: 0.85rem;
+    }
+
+    .total-counts {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-box h3 {
+        font-size: 0.9rem;
+    }
+
+    .stat-box p {
+        font-size: 1.3rem;
+    }
+
+    .modal-content:not(.view-attendance-modal) h3 {
+        font-size: 1.25rem;
+    }
+
+    .modal-content .student-table,
+    .modal-content .module-table,
+    .modal-content .attendance-table:not(.excel-like),
+    .modal-content .announcement-table {
+        font-size: 0.8rem;
+    }
+
+    .modal-content .student-table th,
+    .modal-content .student-table td,
+    .modal-content .module-table th,
+    .modal-content .module-table td,
+    .modal-content .attendance-table:not(.excel-like) th,
+    .modal-content .attendance-table:not(.excel-like) td,
+    .modal-content .announcement-table th,
+    .modal-content .announcement-table td {
+        padding: 0.4rem;
+    }
+
+    .attendance-table.excel-like {
+        font-size: 0.8rem;
+    }
+
+    .attendance-table.excel-like th,
+    .attendance-table.excel-like td {
+        padding: 0.4rem;
+    }
+
+    .attendance-table.excel-like td.attendance-status {
+        min-width: 80px;
+    }
+
+    .btn-download,
+    .btn-delete,
+    .btn-edit,
+    .btn-view {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.75rem;
+    }
+
+    .pagination a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .view-attendance-modal h3 {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+    }
+
+    .view-attendance-modal .attendance-form button,
+    .view-attendance-modal .attendance-form .clear-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .profile-img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.analytics-section {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: var(--light);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.analytics-title {
+    font-size: 2rem;
+    font-weight: 700;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: var(--grey);
+    border-radius: 6px;
+    border-top: 4px solid #007bff;
+    padding: 1rem;
+    text-align: center;
+    transition: background 0.2s ease;
+}
+
+.stat-card:hover {
+    border-top: 10px solid #007bff;
+    border-bottom: 2px solid #007bff;
+    border-left: 2px solid #007bff;
+    border-right: 2px solid #007bff;
+    transform: translateY(-5px);
+}
+
+.stat-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #007bff;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 1.5rem;
+}
+
+.chart-card {
+    background-color: var(--light);
+    border-radius: 8px;
+    padding: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), #0056b3;
+}
+
+.chart-title {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 600;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.analytics-canvas {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    color: var(--dark);
+}
+
+.pie-canvas {
+    max-height: 300px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .analytics-section {
+        padding: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 0.75rem;
+    }
+
+    .chart-card {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .analytics-title {
+        font-size: 1.1rem;
+    }
+
+    .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .chart-title {
+        font-size: 0.9rem;
+    }
+}

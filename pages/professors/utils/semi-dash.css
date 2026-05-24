@@ -1,0 +1,188 @@
+.enrolled-subjects-containers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.col-3 {
+    width: calc(25% - 20px); 
+    box-sizing: border-box;
+}
+
+.subject-boxes {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px; 
+    transition: box-shadow 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.subject-boxes:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.subject-img-container {
+    width: 100%;
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.subject-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subject-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.subject-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.professor-and-dots {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--dark-grey);
+    padding-top: 10px;
+}
+
+.professor-details {
+    display: flex;
+    align-items: center;
+}
+
+.professor-details img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.professor-name {
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.professor-details small {
+    font-size: 12px;
+    color: var(--dark-grey);
+}
+
+.dots-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px var(--blue);
+    min-width: 180px; 
+    padding: 0;
+    z-index: 10; 
+}
+
+.dropdown-menu.show {
+    display: block;
+    color: var(--dark);
+}
+
+.dropdown-item {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    width: 100%; 
+}
+
+.dropdown-item:hover {
+    background-color: var(--grey);
+}
+
+.dots-dropdown .bx {
+    font-size: 24px;
+    color: var(--dark); 
+    margin-right: 10px;
+}
+
+.dots-dropdown i:hover {
+    color: var(--blue); 
+}
+
+
+.no-enrollment {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+.no-enrollment svg {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.no-enrollment p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .col-3 {
+        width: calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .col-3 {
+        width: 100%; 
+    }
+}
+
+.no-enrollment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light);
+    align-items: center;
+    border-radius: 10px;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.no-enrollment svg {
+    margin-bottom: 20px;
+    color: #dc3545; 
+}
+
+.no-enrollment p {
+    font-size: 16px;
+    color: var(--dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}

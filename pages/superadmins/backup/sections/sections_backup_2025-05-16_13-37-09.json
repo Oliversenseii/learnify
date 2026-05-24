@@ -1,0 +1,24 @@
+[
+    {
+        "sectionID": 1,
+        "sectionCode": "A ",
+        "sectionName": "Matthew",
+        "gradeLevel": "Grade 12",
+        "semester": "2nd Sem",
+        "strandID": 7,
+        "dateCreated": "2025-02-03 00:38:34",
+        "archived": 0,
+        "userID": 17
+    },
+    {
+        "sectionID": 2,
+        "sectionCode": "B",
+        "sectionName": "Bethany",
+        "gradeLevel": "Grade 11",
+        "semester": "2nd Sem",
+        "strandID": 3,
+        "dateCreated": "2025-02-03 02:41:12",
+        "archived": 0,
+        "userID": 3
+    }
+]

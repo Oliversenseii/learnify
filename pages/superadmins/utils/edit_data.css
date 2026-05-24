@@ -1,0 +1,99 @@
+.btn-edit,
+.btn-archive {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: black;
+}
+
+.btn-archive {
+    background: linear-gradient(135deg, #dc3545, #c82333);
+    color: #ffffff;
+}
+
+.btn-edit:hover {
+    background: linear-gradient(135deg, #e0a800, #c69500);
+}
+
+.btn-archive:hover {
+    background: linear-gradient(135deg, #c82333, #b21f2d);
+}
+
+.edit-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--light);
+    border-radius: 8px;
+}
+
+.edit-form .form-group {
+    margin-bottom: 15px;
+}
+
+.edit-form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.edit-form .form-group input:focus,
+.edit-form .form-group textarea:focus,
+.edit-form .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.edit-form .form-group input[type="date"] {
+    padding: 9px;
+}
+
+/* BUTTON */
+.btn-save,
+.btn-cancel {
+    padding: 10px 15px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.btn-save {
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+}
+
+@media (max-width: 768px) {
+    .edit-form {
+        padding: 15px;
+    }
+
+    .edit-form .form-group input,
+    .edit-form .form-group select {
+        font-size: 14px;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
